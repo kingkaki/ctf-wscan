@@ -1,0 +1,15 @@
+user/
+login/
+users/
+admin/
+home/
+test/
+administrator/
+houtai/
+backdoor/
+flag/
+upload/
+uploads/
+download/
+downloads/
+manager/
