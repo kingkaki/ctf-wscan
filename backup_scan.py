@@ -4,13 +4,18 @@ import requests
 
 def backup_scan(files):
     _files = [os.path.splitext(file)[0] for file in files] #获取不带后缀的文件名
-    files += _files
+    bfiles = files + _files
+    
     with open("dict/backup_suffix.txt","r") as f:
         suffixs = [suffix.rstrip() for suffix in f.readlines()]
-    back_files = (file+suffix for file in files for suffix in suffixs)
+    back_files = (file+suffix for file in bfiles for suffix in suffixs)
+    founded_bakcups = []
     for back_file in back_files:
         r = requests.head(back_file)
+        if r.status_code != 404:
+            founded_bakcups.append(back_file)
         print(r,back_file)
+    return list(set(founded_bakcups))
 
 
 
