@@ -14,7 +14,9 @@ def backup_scan(files):
         r = requests.head(back_file)
         if r.status_code != 404:
             founded_bakcups.append(back_file)
-        print(r,back_file)
+            print(r,back_file)
+        else:
+            print(r, back_file, end="\r")
     return list(set(founded_bakcups))
 
 

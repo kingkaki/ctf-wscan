@@ -10,7 +10,9 @@ def file_scan(dirs):
         r = requests.head(url)
         if(r.status_code!=404):
             founded_files.append(url)
-        print(url,r)
+            print(r, url)
+        else:
+            print(r, url, end="\r")
     return list(set(founded_files))
 
 

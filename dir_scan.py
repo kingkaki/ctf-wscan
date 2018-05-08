@@ -11,7 +11,9 @@ def dir_scan(url):
         r = requests.head(_dir)
         if(r.status_code!=404):
             founded_dirs.append(_dir)
-        print(_dir, r)
+            print(r, _dir)
+        else:
+            print(r, _dir, end="\r")
     return list(set(founded_dirs))
 
 def main():
