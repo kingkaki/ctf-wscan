@@ -1,14 +1,19 @@
 #encoding=utf8
 import requests
 
-root_url = "http://118.190.152.202:8006/"
-with open("dict\sensitive_dir.txt","r") as f:
-    dirs = f.readlines()
 
-dirs = [_dir.rstrip() for _dir in dirs]
+def dir_scan(url):
+    with open("dict\sensitive_dir.txt", "r") as f:
+        dirs = f.readlines()
+    dirs = [url+_dir.rstrip() for _dir in dirs]
+    for _dir in dirs:
+        r = requests.head(_dir)
+        print(_dir, r)
 
-for _dir in dirs :
-    url = root_url+_dir
-    r = requests.head(url)
-    print(url,r)
+def main():
+    url = "http://118.190.152.202:8006/"
+    dir_scan(url)
+
+if __name__ == '__main__':
+    main()
 
