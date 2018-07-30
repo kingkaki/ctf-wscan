@@ -2,14 +2,14 @@
 # @Author: King kaki
 # @Date:   2018-07-30 13:18:58
 # @Last Modified by:   King kaki
-# @Last Modified time: 2018-07-30 13:49:48
+# @Last Modified time: 2018-07-30 15:47:46
 
 import sys
 import re
 import threading
-sys.path.append('../')
 
 from config import *
+from lib.generatedict import GenerateDcit
 
 import requests
 
@@ -21,11 +21,20 @@ def setting():
 	elif REQUEST_METHOD == 2:
 		req = requests.get
 
-	# 获取扫描列表
+	# 获取默认扫描列表
 	with open('dict/default.txt') as f:
 		files = f.readlines()
-	files = (file.strip() for file in files)
 	
+
+	#生成关键字字典
+	if KEY_WORDS:
+		g = GenerateDcit()
+		for i in g.generate():
+			files.append(i)
+
+
+	files = (file.strip() for file in files)
+
 	return req, files
 
 req, files = setting()
@@ -36,9 +45,16 @@ class scan(threading.Thread):
 		self.url = url
 
 	def run(self):
-		# global files
 		for file in files:
-			r = req(self.url+file)
-			print(r.status_code, file,threading.current_thread())
+			r = req(self.url+file, timeout=TIME_OUT)
+			with threading.Lock():
+				self.display(r, file)
+				
+	def display(self, r, file):
+
+		if r.status_code != 403 and r.status_code != 404: 
+			print('[{}] => {}{}'.format(r.status_code, file, '\t'*5))
+		else:
+			print('[{}] => {}{}'.format(r.status_code, file, '\t'*5), end='\r')
 
 

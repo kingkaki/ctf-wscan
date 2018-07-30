@@ -2,14 +2,16 @@
 # @Author: King kaki
 # @Date:   2018-07-30 12:37:36
 # @Last Modified by:   King kaki
-# @Last Modified time: 2018-07-30 13:42:35
+# @Last Modified time: 2018-07-30 15:46:45
 
-url = 'http://blog.kingkk.com/'
+url = 'http://localhost/'
 
+from config import * 
 from lib.scan import scan
 
+
 s = []
-for i in range(10):
+for i in range(NUMBER_OF_THREAD):
 	s.append(scan(url))
 for i in s:
 	i.start()
