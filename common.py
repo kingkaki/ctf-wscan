@@ -1,4 +1,0 @@
-#encoding=utf8
-
-
-    

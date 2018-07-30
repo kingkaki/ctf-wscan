@@ -1,6 +1,0 @@
-index
-login
-admin
-www
-test
-

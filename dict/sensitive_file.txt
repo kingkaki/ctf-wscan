@@ -1,6 +1,0 @@
-index.html
-index.php
-index.txt
-admin.php
-admin.txt
-flag.txt
