@@ -2,7 +2,7 @@
 # @Author: King kaki
 # @Date:   2018-07-30 12:40:36
 # @Last Modified by:   King kaki
-# @Last Modified time: 2018-07-30 13:57:11
+# @Last Modified time: 2018-07-30 15:54:35
 
 # 关键字
 KEY_WORDS = ['flag','ctf']
@@ -16,3 +16,6 @@ REQUEST_METHOD = 1
 
 # 超时时间
 TIME_OUT = 3
+
+# 记录缓存日志
+CACHE_LOG = True

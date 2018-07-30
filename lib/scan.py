@@ -2,7 +2,7 @@
 # @Author: King kaki
 # @Date:   2018-07-30 13:18:58
 # @Last Modified by:   King kaki
-# @Last Modified time: 2018-07-30 15:47:46
+# @Last Modified time: 2018-07-30 16:25:33
 
 import sys
 import re
@@ -39,22 +39,27 @@ def setting():
 
 req, files = setting()
 
-class scan(threading.Thread):
-	def __init__(self, url):
+class Scan(threading.Thread):
+	def __init__(self, url, log):
 		threading.Thread.__init__(self)
 		self.url = url
+		self.log = log
 
 	def run(self):
 		for file in files:
 			r = req(self.url+file, timeout=TIME_OUT)
 			with threading.Lock():
 				self.display(r, file)
+
 				
 	def display(self, r, file):
-
 		if r.status_code != 403 and r.status_code != 404: 
 			print('[{}] => {}{}'.format(r.status_code, file, '\t'*5))
+			self.log[file] = r.status_code
 		else:
 			print('[{}] => {}{}'.format(r.status_code, file, '\t'*5), end='\r')
+
+
+
 
 
