@@ -204,3 +204,6 @@ flag.txt
 /include/config.inc.php
 /phpsso_server/caches/configs/database.php
 /phpsso_server/caches/configs/system.php
+404.php
+index.html
+index.php

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: King kaki
 # @Date:   2018-07-30 13:18:58
-# @Last Modified by:   King kaki
-# @Last Modified time: 2018-07-30 16:25:33
+# @Last Modified by:   kingkk
+# @Last Modified time: 2018-08-12 09:55:23
 
 import sys
 import re
@@ -47,13 +47,16 @@ class Scan(threading.Thread):
 
 	def run(self):
 		for file in files:
-			r = req(self.url+file, timeout=TIME_OUT)
+			try:
+				r = req(self.url+file, timeout=TIME_OUT)
+			except:
+				continue
 			with threading.Lock():
 				self.display(r, file)
 
 				
 	def display(self, r, file):
-		if r.status_code != 403 and r.status_code != 404: 
+		if r.status_code not in INVALID_CODE: 
 			print('[{}] => {}{}'.format(r.status_code, file, '\t'*5))
 			self.log[file] = r.status_code
 		else:

@@ -1,32 +1,18 @@
 # -*- coding: utf-8 -*-
 # @Author: King kaki
 # @Date:   2018-07-30 12:37:36
-# @Last Modified by:   King kaki
-# @Last Modified time: 2018-07-30 19:34:14
+# @Last Modified by:   kingkk
+# @Last Modified time: 2018-08-12 09:58:53
 
-url = 'http://localhost:80/'
+# url = 'http://localhost:80/'
+# url = 'http://ctf5.shiyanbar.com/web/'
+import sys
 
-from config import * 
-from lib.scan import Scan
-from lib.log import Log
-
+from lib.init import Init
 
 def main():
-	s = []
-	loglist = {}
-	for i in range(NUMBER_OF_THREAD):
-		s.append(Scan(url, loglist))
-	for i in s:
-		i.start()
-	for i in s:
-		i.join()
-
-	# print(loglist)
-	if CACHE_LOG:
-		log = Log(url, loglist)
-		log.save()
-
-
+	scan = Init(sys.argv)
+	scan.start()
 
 if __name__ == '__main__':
 	main()
