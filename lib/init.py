@@ -2,7 +2,7 @@
 # @Author: kingkk
 # @Date:   2018-08-11 19:32:38
 # @Last Modified by:   kingkk
-# @Last Modified time: 2018-08-12 09:52:44
+# @Last Modified time: 2018-08-12 10:27:39
 import sys
 from config import * 
 from lib.log import Log
@@ -18,7 +18,8 @@ class Init:
 
 
 	def help(self):
-		help = 'Useage: python ctf-wscan.py http://ctf.test.com'
+		help = 'Useage : python ctf-wscan.py [website url]\n'
+		help+= 'Example: python ctf-wscan.py http://ctf.test.com'
 		print(help)
 		exit()
 

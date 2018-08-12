@@ -2,7 +2,7 @@
 # @Author: King kaki
 # @Date:   2018-07-30 16:06:30
 # @Last Modified by:   kingkk
-# @Last Modified time: 2018-08-11 19:43:33
+# @Last Modified time: 2018-08-12 10:21:18
 
 from datetime import datetime
 import re
@@ -19,8 +19,6 @@ class Log:
 		with open('output/{}'.format(self.filename), 'w+') as f:
 			f.write('[TIME] \t\t\t=> {}\n'.format(datetime.now()) )
 			f.write('[TARGET] \t\t\t=> {}\n'.format(self.url))
-			# f.write('\n')
-			# f.write('{}SETTING{}\n'.format('*'*10, '*'*10))
 			f.write('[NUMBER_OF_THRED] \t=> {}\n'.format(NUMBER_OF_THREAD))
 			f.write('[KEY_WORDS] \t\t=> {}\n'.format(KEY_WORDS))
 			f.write('\n')
