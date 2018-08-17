@@ -5,7 +5,7 @@
 # @Last Modified time: 2018-08-12 09:54:54
 
 # 关键字
-KEY_WORDS = ['flag','ctf','kzhan.php']
+KEY_WORDS = ['flag','ctf', 'admin']
 
 # 线程数
 NUMBER_OF_THREAD = 10

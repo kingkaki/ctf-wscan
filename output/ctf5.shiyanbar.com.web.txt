@@ -1,7 +1,0 @@
-[TIME] 			=> 2018-08-12 11:21:12.687960
-[TARGET] 			=> http://ctf5.shiyanbar.com/web/
-[NUMBER_OF_THRED] 	=> 10
-[KEY_WORDS] 		=> ['flag', 'ctf', 'kzhan.php']
-
-[200] => upload/
-[200] => kzhan.php/
