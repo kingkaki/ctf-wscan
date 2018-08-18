@@ -42,12 +42,12 @@ _viminfo
 %3f.back
 phpinfo.php
 robots.txt
-test.php
 .htaccess
 .bash_history
 .svn/
 .git/
 .index.php.swp
+index.php.swp
 index.php.bak
 .index.php~
 index.php.bak_Edietplus
@@ -148,7 +148,6 @@ login.php
 register.php
 upload.php
 home.php
-test.php
 log.php
 logs.php
 config.php

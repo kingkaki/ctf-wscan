@@ -2,7 +2,7 @@
 # @Author: King kaki
 # @Date:   2018-07-30 12:40:36
 # @Last Modified by:   kingkk
-# @Last Modified time: 2018-08-12 09:54:54
+# @Last Modified time: 2018-08-18 15:59:05
 
 # 关键字
 KEY_WORDS = ['flag','ctf', 'admin']
