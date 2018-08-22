@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: King kaki
 # @Date:   2018-07-30 12:40:36
-# @Last Modified by:   kingkk
-# @Last Modified time: 2018-08-18 15:59:05
+# @Last Modified by:   King kaki
+# @Last Modified time: 2018-08-21 22:04:40
 
 # 关键字
 KEY_WORDS = ['flag','ctf', 'admin']
@@ -18,7 +18,7 @@ REQUEST_METHOD = 1
 INVALID_CODE = [404, 403]
 
 # 超时时间
-TIME_OUT = 3
+TIME_OUT = 5
 
 # 记录缓存日志
 CACHE_LOG = True

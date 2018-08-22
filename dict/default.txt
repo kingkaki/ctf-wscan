@@ -10,6 +10,7 @@ README
 .svn
 .svn/wc.db
 .svn/entries
+user.php.bak
 .hg
 .DS_store
 WEB-INF/web.xml
