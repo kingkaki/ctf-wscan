@@ -14,7 +14,7 @@ Example: python ctf-wscan.py http://ctf.test.com
 
 # 新增-k参数
 ```
-Useage : python ctf-wscan.py [website url] [key words ……]
+Useage : python ctf-wscan.py [website url] [-k  key words ……]
 ```
 由于觉得添加关键字这个功能还是蛮常用的，于是添加了个`-k`参数，可以在命令行中添加参数
 
