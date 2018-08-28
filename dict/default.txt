@@ -132,7 +132,6 @@ backup.rar
 .svn/entries
 .git/config
 .ds_store
-index.php
 flag.php
 fl4g.php
 f1ag.php
@@ -177,7 +176,6 @@ backup.sql.bz2
 backup.zip
 rss.xml
 crossdomain.xml
-robots.txt
 1.txt
 flag.txt
 /wp-config.php
@@ -205,7 +203,6 @@ flag.txt
 /phpsso_server/caches/configs/system.php
 404.php
 index.html
-index.php
 user/
 users/
 admin/

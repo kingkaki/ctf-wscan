@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: kingkk
 # @Date:   2018-08-11 19:32:38
-# @Last Modified by:   King kaki
-# @Last Modified time: 2018-08-21 22:02:34
+# @Last Modified by:   kingkk
+# @Last Modified time: 2018-08-28 11:36:19
 import sys
 import requests
 from config import * 
@@ -80,7 +80,7 @@ class Init:
 		loglist = {}
 		files = self.get_files()
 		req = self.detect()
-		print(req)
+		# print(req)
 		# for i in files:
 		# 	print(i)
 		for i in range(NUMBER_OF_THREAD):
