@@ -3,6 +3,11 @@
 .git/index
 .git/config
 .git/description
+source
+source.php
+source.php.bak
+.source.php.bak
+source.php.swp
 README.MD
 README.md
 README
@@ -62,6 +67,7 @@ index.php.7z
 index.php.tar.gz
 index.php.txt
 login.php
+register
 register.php
 test.php
 upload.php
