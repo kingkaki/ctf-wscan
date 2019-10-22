@@ -45,17 +45,17 @@ class Init:
 		rand1 = ''.join(random.sample(string.ascii_letters, 8))
 		rand2 = uuid.uuid4()
 		rand3 = random.randint(1000000,99999999)
-		r1 = requests.get(self.url+str(rand1))
-		r2 = requests.get(self.url+str(rand2))
-		r3 = requests.get(self.url+str(rand3))
+		r1 = requests.Session().get(self.url+str(rand1))
+		r2 = requests.Session().get(self.url+str(rand2))
+		r3 = requests.Session().get(self.url+str(rand3))
 		if r1.status_code == r2.status_code == r3.status_code == 200 and len(r1.text) == len(r2.text) == len(r3.text):
-			req = requests.get
+			req = requests.Session().get
 			return len(r1.text),req
 		else:
 			if REQUEST_METHOD == 1:
-				req = requests.head
+				req = requests.Session().head
 			elif REQUEST_METHOD == 2:
-				req = requests.get
+				req = requests.Session().get
 			return -1,req
 
 
